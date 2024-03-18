@@ -29,11 +29,17 @@ public class OpenListener implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+
+    String directoryName = "Sauvegarde";
+    File directory = new File(directoryName);
+    if(!directory.exists()){
+        directory.mkdir();
+    }
+    String pathName = directory.getAbsolutePath();
     
     // Ouvre l'explorateur de fichiers à la bonne destination
     JFileChooser fileChooser = new JFileChooser();
-    fileChooser.setCurrentDirectory(new File("C:\\Users\\natha\\Documents\\Polytech\\INFO\\INFO402\\TP\\TP23_2048\\Sauvegarde"));
-
+    fileChooser.setCurrentDirectory(new File(pathName));
     int returnValue = fileChooser.showOpenDialog(fenetre);
 
     fenetre.requestFocusInWindow();

@@ -50,13 +50,20 @@ public class SaveGameButtonListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e){
 
+        String directoryName = "Sauvegarde";
+        File directory = new File(directoryName);
+        if(!directory.exists()){
+            directory.mkdir();
+        }
+
+        String pathName = directory.getAbsolutePath();
+
         //Récupération du jeu
         this.jeu = fenetre.getJeu();
 
         // Ouverture de l'explorateur de fichiers
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setCurrentDirectory(new File("C:\\Users\\natha\\Documents\\Polytech\\INFO\\INFO402\\TP\\TP23_2048\\Sauvegarde"));
-
+        fileChooser.setCurrentDirectory(new File(pathName));
         int file = fileChooser.showSaveDialog(fenetre);
 
         fenetre.requestFocusInWindow();
