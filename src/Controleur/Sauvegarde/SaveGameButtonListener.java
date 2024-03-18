@@ -50,7 +50,7 @@ public class SaveGameButtonListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e){
 
-        String directoryName = "Sauvegarde";
+        String directoryName = "SaveGame";
         File directory = new File(directoryName);
         if(!directory.exists()){
             directory.mkdir();
