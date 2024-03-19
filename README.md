@@ -25,5 +25,5 @@ Having the JDK installed on your computer is required to test the project.
   java --enable-preview -cp bin Vue.LancerFenetre
 ```
     
-![2048 Presentation](GamePresentation.png)
+<img src="GamePresentation.png" style="width:583px;height:493px;">
 
