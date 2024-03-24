@@ -8,7 +8,7 @@ Coding the famous 2048 game in Java.
 
 Having the JDK installed on your computer is required to test the project.
 
-#### Navigate to the directory of your choice with 
+#### Navigate to the directory of the project
 
 ```bash
   cd yourPath  
